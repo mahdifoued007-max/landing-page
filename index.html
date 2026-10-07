@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Service Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Service Name</h1>
+        <p>A short description of the service you offer.</p>
+        <button onclick="orderNow()">Order Now</button>
+    </header>
+
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature reveal">
+            <h3>⚡ Speed</h3>
+            <p>We deliver fast and reliable service.</p>
+        </div>
+        <div class="feature reveal">
+            <h3>💎 Quality</h3>
+            <p>We guarantee the best possible result.</p>
+        </div>
+        <div class="feature reveal">
+            <h3>🤝 Trust</h3>
+            <p>Your satisfaction is our top priority.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 All rights reserved</p>
+    </footer>
+
+    <script>
+        function orderNow() {
+            alert("Thank you! We will contact you soon.");
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>            <p>We deliver fast and reliable service.</p
